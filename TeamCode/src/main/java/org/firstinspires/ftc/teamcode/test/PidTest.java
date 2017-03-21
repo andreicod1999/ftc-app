@@ -131,7 +131,7 @@ public class PidTest extends AutonomousOpMode {
 
                 while (gamepad1.y && opModeIsActive() && arrived == false) {
                     //PID
-                    if (error  >= -20 && error <= 20){
+                    if (error  >= -10 && error <= 10){
 
                         robot.tractiuneIntegrala(motorCorrection, -motorCorrection);
                         waitForMs(3);
@@ -140,7 +140,7 @@ public class PidTest extends AutonomousOpMode {
                         while (error != 0 && lastError != 0) {
                             motorCorrection = (((P * error) + (I * (error + lastError)) + D * (error - lastError)) * scale) / 100;
 
-                            robot.tractiuneIntegrala(-motorCorrection / 4, motorCorrection / 4);
+                            robot.tractiuneIntegrala(-motorCorrection, motorCorrection);
 
                             lastError = error;
                             angle = robot.gyro.getIntegratedZValue();
@@ -177,7 +177,7 @@ public class PidTest extends AutonomousOpMode {
 
                 while (gamepad1.a && opModeIsActive() && arrived == false) {
                     //PID
-                    if (error  >= -20 && error <= 20){
+                    if (error  >= -10 && error <= 10){
 
                         robot.tractiuneIntegrala(motorCorrection, -motorCorrection);
                         waitForMs(3);
@@ -186,7 +186,7 @@ public class PidTest extends AutonomousOpMode {
                         while (error != 0 && lastError != 0) {
                             motorCorrection = (((P * error) + (I * (error + lastError)) + D * (error - lastError)) * scale) / 100;
 
-                            robot.tractiuneIntegrala(-motorCorrection / 4, motorCorrection / 4);
+                            robot.tractiuneIntegrala(-motorCorrection, motorCorrection);
 
                             lastError = error;
                             angle = robot.gyro.getIntegratedZValue();
@@ -223,7 +223,7 @@ public class PidTest extends AutonomousOpMode {
 
                 while (gamepad1.x && opModeIsActive() && arrived == false) {
                     //PID
-                    if (error  >= -20 && error <= 20){
+                    if (error  >= -10 && error <= 10){
 
                         robot.tractiuneIntegrala(motorCorrection, -motorCorrection);
                         waitForMs(3);
@@ -232,7 +232,7 @@ public class PidTest extends AutonomousOpMode {
                         while (error != 0 && lastError != 0) {
                             motorCorrection = (((P * error) + (I * (error + lastError)) + D * (error - lastError)) * scale) / 100;
 
-                            robot.tractiuneIntegrala(-motorCorrection / 4, motorCorrection / 4);
+                            robot.tractiuneIntegrala(-motorCorrection, motorCorrection);
 
                             lastError = error;
                             angle = robot.gyro.getIntegratedZValue();
@@ -269,7 +269,7 @@ public class PidTest extends AutonomousOpMode {
 
                 while (gamepad1.b && opModeIsActive() && arrived == false) {
                     //PID
-                    if (error  >= -20 && error <= 20){
+                    if (error  >= -10 && error <= 10){
 
                         robot.tractiuneIntegrala(motorCorrection, -motorCorrection);
                         waitForMs(3);
@@ -278,7 +278,7 @@ public class PidTest extends AutonomousOpMode {
                         while (error != 0 && lastError != 0) {
                             motorCorrection = (((P * error) + (I * (error + lastError)) + D * (error - lastError)) * scale) / 100;
 
-                            robot.tractiuneIntegrala(-motorCorrection / 4, motorCorrection / 4);
+                            robot.tractiuneIntegrala(-motorCorrection, motorCorrection);
 
                             lastError = error;
                             angle = robot.gyro.getIntegratedZValue();
